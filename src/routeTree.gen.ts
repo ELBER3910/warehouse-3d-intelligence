@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArmazenagemRouteImport } from './routes/armazenagem'
+import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
+import { Route as EnderecamentoRouteImport } from './routes/enderecamento'
+import { Route as EstoqueRouteImport } from './routes/estoque'
+import { Route as ExpedicaoRouteImport } from './routes/expedicao'
+import { Route as GalpaoRouteImport } from './routes/galpao'
+import { Route as MovimentacoesRouteImport } from './routes/movimentacoes'
+import { Route as ProdutosRouteImport } from './routes/produtos'
+import { Route as RecebimentoRouteImport } from './routes/recebimento'
+import { Route as RelatoriosRouteImport } from './routes/relatorios'
+import { Route as SeparacaoRouteImport } from './routes/separacao'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArmazenagemRoute = ArmazenagemRouteImport.update({
+  id: '/armazenagem',
+  path: '/armazenagem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesRoute = ConfiguracoesRouteImport.update({
+  id: '/configuracoes',
+  path: '/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnderecamentoRoute = EnderecamentoRouteImport.update({
+  id: '/enderecamento',
+  path: '/enderecamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstoqueRoute = EstoqueRouteImport.update({
+  id: '/estoque',
+  path: '/estoque',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExpedicaoRoute = ExpedicaoRouteImport.update({
+  id: '/expedicao',
+  path: '/expedicao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalpaoRoute = GalpaoRouteImport.update({
+  id: '/galpao',
+  path: '/galpao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MovimentacoesRoute = MovimentacoesRouteImport.update({
+  id: '/movimentacoes',
+  path: '/movimentacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdutosRoute = ProdutosRouteImport.update({
+  id: '/produtos',
+  path: '/produtos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecebimentoRoute = RecebimentoRouteImport.update({
+  id: '/recebimento',
+  path: '/recebimento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RelatoriosRoute = RelatoriosRouteImport.update({
+  id: '/relatorios',
+  path: '/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeparacaoRoute = SeparacaoRouteImport.update({
+  id: '/separacao',
+  path: '/separacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/armazenagem': typeof ArmazenagemRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/enderecamento': typeof EnderecamentoRoute
+  '/estoque': typeof EstoqueRoute
+  '/expedicao': typeof ExpedicaoRoute
+  '/galpao': typeof GalpaoRoute
+  '/movimentacoes': typeof MovimentacoesRoute
+  '/produtos': typeof ProdutosRoute
+  '/recebimento': typeof RecebimentoRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/separacao': typeof SeparacaoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/armazenagem': typeof ArmazenagemRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/enderecamento': typeof EnderecamentoRoute
+  '/estoque': typeof EstoqueRoute
+  '/expedicao': typeof ExpedicaoRoute
+  '/galpao': typeof GalpaoRoute
+  '/movimentacoes': typeof MovimentacoesRoute
+  '/produtos': typeof ProdutosRoute
+  '/recebimento': typeof RecebimentoRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/separacao': typeof SeparacaoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/armazenagem': typeof ArmazenagemRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/enderecamento': typeof EnderecamentoRoute
+  '/estoque': typeof EstoqueRoute
+  '/expedicao': typeof ExpedicaoRoute
+  '/galpao': typeof GalpaoRoute
+  '/movimentacoes': typeof MovimentacoesRoute
+  '/produtos': typeof ProdutosRoute
+  '/recebimento': typeof RecebimentoRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/separacao': typeof SeparacaoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/armazenagem'
+    | '/configuracoes'
+    | '/enderecamento'
+    | '/estoque'
+    | '/expedicao'
+    | '/galpao'
+    | '/movimentacoes'
+    | '/produtos'
+    | '/recebimento'
+    | '/relatorios'
+    | '/separacao'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/armazenagem'
+    | '/configuracoes'
+    | '/enderecamento'
+    | '/estoque'
+    | '/expedicao'
+    | '/galpao'
+    | '/movimentacoes'
+    | '/produtos'
+    | '/recebimento'
+    | '/relatorios'
+    | '/separacao'
+  id:
+    | '__root__'
+    | '/'
+    | '/armazenagem'
+    | '/configuracoes'
+    | '/enderecamento'
+    | '/estoque'
+    | '/expedicao'
+    | '/galpao'
+    | '/movimentacoes'
+    | '/produtos'
+    | '/recebimento'
+    | '/relatorios'
+    | '/separacao'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArmazenagemRoute: typeof ArmazenagemRoute
+  ConfiguracoesRoute: typeof ConfiguracoesRoute
+  EnderecamentoRoute: typeof EnderecamentoRoute
+  EstoqueRoute: typeof EstoqueRoute
+  ExpedicaoRoute: typeof ExpedicaoRoute
+  GalpaoRoute: typeof GalpaoRoute
+  MovimentacoesRoute: typeof MovimentacoesRoute
+  ProdutosRoute: typeof ProdutosRoute
+  RecebimentoRoute: typeof RecebimentoRoute
+  RelatoriosRoute: typeof RelatoriosRoute
+  SeparacaoRoute: typeof SeparacaoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/armazenagem': {
+      id: '/armazenagem'
+      path: '/armazenagem'
+      fullPath: '/armazenagem'
+      preLoaderRoute: typeof ArmazenagemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes': {
+      id: '/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof ConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enderecamento': {
+      id: '/enderecamento'
+      path: '/enderecamento'
+      fullPath: '/enderecamento'
+      preLoaderRoute: typeof EnderecamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estoque': {
+      id: '/estoque'
+      path: '/estoque'
+      fullPath: '/estoque'
+      preLoaderRoute: typeof EstoqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/expedicao': {
+      id: '/expedicao'
+      path: '/expedicao'
+      fullPath: '/expedicao'
+      preLoaderRoute: typeof ExpedicaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galpao': {
+      id: '/galpao'
+      path: '/galpao'
+      fullPath: '/galpao'
+      preLoaderRoute: typeof GalpaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/movimentacoes': {
+      id: '/movimentacoes'
+      path: '/movimentacoes'
+      fullPath: '/movimentacoes'
+      preLoaderRoute: typeof MovimentacoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produtos': {
+      id: '/produtos'
+      path: '/produtos'
+      fullPath: '/produtos'
+      preLoaderRoute: typeof ProdutosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recebimento': {
+      id: '/recebimento'
+      path: '/recebimento'
+      fullPath: '/recebimento'
+      preLoaderRoute: typeof RecebimentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/relatorios': {
+      id: '/relatorios'
+      path: '/relatorios'
+      fullPath: '/relatorios'
+      preLoaderRoute: typeof RelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/separacao': {
+      id: '/separacao'
+      path: '/separacao'
+      fullPath: '/separacao'
+      preLoaderRoute: typeof SeparacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArmazenagemRoute: ArmazenagemRoute,
+  ConfiguracoesRoute: ConfiguracoesRoute,
+  EnderecamentoRoute: EnderecamentoRoute,
+  EstoqueRoute: EstoqueRoute,
+  ExpedicaoRoute: ExpedicaoRoute,
+  GalpaoRoute: GalpaoRoute,
+  MovimentacoesRoute: MovimentacoesRoute,
+  ProdutosRoute: ProdutosRoute,
+  RecebimentoRoute: RecebimentoRoute,
+  RelatoriosRoute: RelatoriosRoute,
+  SeparacaoRoute: SeparacaoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

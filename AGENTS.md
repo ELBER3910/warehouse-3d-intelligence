@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+- Warehouse physical structure (aisles/racks/positions, addresses, 3D coords) lives in src/lib/warehouse-layout.ts as pure TS; the 3D scene and dashboard only read it. Why: one source of truth for future DB-backed positions.
+- Module navigation is driven by src/lib/modules.ts; placeholder modules render via ModulePage until their data layer exists.
